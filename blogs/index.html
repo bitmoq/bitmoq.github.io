@@ -19,7 +19,7 @@ layout: default
                     </p>
                     <p>
                         {% for category in post.categories%}
-                        <a href="/categories/#{{category | slugify | downcase }}"
+                        <a href="/blogs/categories/#{{category | slugify | downcase }}"
                             class="badge text-bg-primary">{{category}}</a>
                         {% endfor %}
                     </p>

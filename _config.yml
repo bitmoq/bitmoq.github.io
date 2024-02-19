@@ -21,17 +21,17 @@ paginate_path: "/blogs/page:num/"
 
 permalink: /blog/:title/
 
-jekyll-archives:
-  enabled:
-    - categories
-    - year
-  layout: archive
-  permalinks:
-    year: 'blogs/archives/year/:year/'
-    category: 'blogs/archives/category/:name/'
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - year
+#   layout: archive
+#   permalinks:
+#     year: 'blogs/archives/year/:year/'
+#     category: 'blogs/archives/category/:name/'
 
 
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-archives
+  # - jekyll-archives

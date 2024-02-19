@@ -5,18 +5,16 @@ layout: default
 
 <div class="container-fluid">
     <div style="margin-bottom: 2rem">
-        <h1>Blogs Archives by Year</h1>
+        <h1>Blogs by Date</h1>
     </div>
     <div class="d-flex h-100  g-5">
         {% for post in site.posts %}
         <div>
-            {% assign currentdate = post.date | date: "%Y" %}
+            {% assign currentdate = post.date | date: "%B %Y" %}
             {% if currentdate != date %}
             {% unless forloop.first %}</ul>{% endunless %}
 
-            <a href="/blogs/archives/year/{{currentdate}}/">
-                <h3 id="y{{post.date | date: " %B %Y"}}">{{ currentdate }}</h3>
-            </a>
+            <h3 id="y{{post.date | date: " %B %Y"}}">{{ currentdate }}</h3>
             <ul>
                 {% assign date = currentdate %}
                 {% endif %}
