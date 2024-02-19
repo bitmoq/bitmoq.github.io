@@ -1,0 +1,24 @@
+title: Bitmoq Technologies
+tagline: Most Reliable & Trusted Salesforce Experts
+url: https://bitmoq.github.io/
+description: Most Reliable & Trusted Salesforce Experts
+author: Bitmoq Technologies
+
+twitter:
+  username: bitmoq
+  card: summary
+
+social:
+  name: Bitmoq
+  links:
+    - https://www.facebook.com/bitmoqtechnology
+    - https://twitter.com/bitmoqtech
+    - https://www.linkedin.com/company/bitmoq-technology/
+
+paginate: 10
+paginate_path: "/blogs/page:num/"
+
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag

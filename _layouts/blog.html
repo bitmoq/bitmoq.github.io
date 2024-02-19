@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div style="margin-bottom: 2rem">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/blogs/index.html">Blogs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ page.title }}
+            </li>
+        </ol>
+    </nav>
+</div>
+<h1>{{ page.title }}</h1>
+<p>
+    Posted on
+    <span class="date"> {{ page.date | date: '%B %d, %Y' }} </span>
+</p>
+<p>
+    {% for category in page.categories%}
+    <a href="/blogs/categories/#{{category | slugify | downcase }}" class="badge text-bg-primary">{{category}}</a>
+    {% endfor %}
+</p>
+{{ content }}
+<br />
+<strong>Hope you found this post useful and insightful.{% if page.comments %} Please let us know your
+    thoughts/suggestions/questions
+    via comments. {% endif %}</strong>
+<hr />
+{% include share-buttons.html %}
+<hr />
+{% include disqus_comments.html %}
