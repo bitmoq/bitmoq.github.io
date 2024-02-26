@@ -89,28 +89,28 @@
   }
 
   blockquote {
-    border-left: 4px solid #0071f3;
-    padding-left: 24px;
-    line-height: 1.6;
-    margin: 24px 0;
-    background-color: #0071f32c;
+    border-left: 4px solid hsl(217, 71%, 53%);
+    padding: 0px 24px;
+    /* line-height: 1.6; */
+    /* margin: 24px 0; */
+    background-color: hsl(217, 71%, 85%);
   }
 
   blockquote p {
-    padding: 10px 0;
+    padding: 1rem;
   }
 
-  .blockquote-info {
-    border-left: 4px solid #008d9f;
-    background-color: #008d9f37;
+  .blockquote-success {
+    border-left: 4px solid hsl(141, 71%, 48%);
+    background-color: hsl(141, 71%, 85%);
   }
 
   .blockquote-warning {
-    border-left: 4px solid #d4c603;
-    background-color: #d4c60335;
+    border-left: 4px solid hsl(48, 100%, 67%);
+    background-color: hsl(48, 100%, 85%);
   }
 
   .blockquote-danger {
-    border-left: 4px solid #ca0202;
-    background-color: rgba(116, 3, 3, 0.079)
+    border-left: 4px solid hsl(348, 100%, 61%);
+    background-color: hsl(348, 100%, 85%);
   }
