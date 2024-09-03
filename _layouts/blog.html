@@ -1,38 +1,41 @@
 ---
 layout: default
 ---
-
-<div style="margin-bottom: 2rem">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/blogs/index.html">Blogs</a></li>
-            <li class="breadcrumb-item active" aria-current="page">
-                {{ page.title }}
-            </li>
-        </ol>
-    </nav>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div style="margin-bottom: 2rem">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/blogs/index.html">Blogs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        {{ page.title }}
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <h1>{{ page.title }}</h1>
+        <p>
+            Posted on
+            <span class="date"> {{ page.date | date: '%B %d, %Y' }} </span>
+        </p>
+        <p>
+            {% for category in page.categories%}
+            <a href="/blogs/categories/#{{category | slugify | downcase }}" class="badge text-bg-danger">{{category}}</a>
+            {% endfor %}
+        </p>
+        {{ content }}
+        <br />
+        <div class="d-flex flex-column">
+            <strong>Hope you found this post useful and insightful.{% if page.comments %} Please let us know your
+                thoughts/suggestions/questions
+                via comments. {% endif %}</strong>
+            <strong>If you want to get in touch with us, please fill up the <a
+                    href="{{site.url}}/contact">contact us form</a> and submit</strong> 
+        </div>
+        <hr />
+        {% include share-buttons.html %}
+        <hr />
+        {% include disqus_comments.html %}
+    </div>
 </div>
-<h1>{{ page.title }}</h1>
-<p>
-    Posted on
-    <span class="date"> {{ page.date | date: '%B %d, %Y' }} </span>
-</p>
-<p>
-    {% for category in page.categories%}
-    <a href="/blogs/categories/#{{category | slugify | downcase }}" class="badge text-bg-primary">{{category}}</a>
-    {% endfor %}
-</p>
-{{ content }}
-<br />
-<div class="d-flex flex-column ">
-    <strong>Hope you found this post useful and insightful.{% if page.comments %} Please let us know your
-        thoughts/suggestions/questions
-        via comments. {% endif %}</strong>
-    <strong>If you want to get in touch with us, please send us an email to <a
-            href="mailto:info@bitmoq.com">info@bitmoq.com</a></strong>
-</div>
-<hr />
-{% include share-buttons.html %}
-<hr />
-{% include disqus_comments.html %}
