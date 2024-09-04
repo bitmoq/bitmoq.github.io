@@ -57,9 +57,9 @@
         <ul class="nav nav-underline">
             <li class="nav-item"><a href="http://localhost:4000/about" class="nav-link link-body-emphasis px-2">About Us</a></li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+                <a href="http://localhost:4000/services/" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <li><a href="http://localhost:4000/services/functional-consulting" class="dropdown-item">Functional Consulting</a></li>
+                    <li><a href="http://localhost:4000/services/business-consulting" class="dropdown-item">Business Consulting</a></li>
                     <li><a href="http://localhost:4000/services/delivery" class="dropdown-item">Technology/Delivery Services</a></li>
                     <li><a href="http://localhost:4000/services/workforce" class="dropdown-item">Workforce as a Service</a></li>
                 </ul>
@@ -83,10 +83,39 @@
 </header>
 
         <div class="py-1"><div class="container-fluid">
-    <h1 id="delivery-services">Our Services</h1>
-    <div>
+    <div class="container-fluid">
+        <h1>Our Services</h1>
         <p>Our services are broadly categorized into three core areas.</p>
-        <div class="row g-4 py-2 row-cols-1 row-cols-lg-3 h-100 d-flex">
+        <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4 d-flex">
+        <div class="card p-3 w-100 h-100">
+            <div class="card-body">
+                <h5 class="card-title"><a href="http://localhost:4000/services/business-consulting">Business Consulting</a></h5>
+                <p class="card-text">Mapping your business objectives to programs, deriving project needs/tuning existing projects to deliver outcomes, measuring & monitoring outcomes, incorporating strategies to boost ROI and optimize spend.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 d-flex">
+        <div class="card p-3 w-100 h-100">
+            <div class="card-body">
+                <h5 class="card-title"><a href="http://localhost:4000/services/delivery">Technology/Delivery Services</a></h5>
+                <p class="card-text">Receive end-to-end platform/software development services across all phases of SDLC - Requirements Gathering, Design & Architecture, Coding, Quality Control, Release Management, Maintenance & Support packaged in the delivery model best suited for you.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 d-flex">
+        <div class="card p-3 w-100 h-100">
+            <div class="card-body">
+                <h5 class="card-title"><a href="http://localhost:4000/services/workforce">Workforce as a Service</a></h5>
+                <p class="card-text">Empower yourself with a new team or augment staff to your existing team with the unique skillset needs that you desire. Engage and disengage with flexible models that suit you the best; you set the expectations, and the workforce will deliver.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- <div class="row g-4 py-2 row-cols-1 row-cols-lg-3 h-100 d-flex">
             <div class="col d-flex align-items-start">
                 <div class="d-flex flex-column justify-content-start h-100 border p-4 bg-primary text-white">
                     <h3>Professional Services</h3>
@@ -127,9 +156,54 @@
                         progressive outcome with efficient resources that ensures zero to minimal disruption to business
                         24*7.</p>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="py-3">
+        <div class="container-fluid mt-5">
+            <h1>Technology Stack</h2>
+            <p>Our services cater to the following tech stack we support.</p>
+            <div class="row g-4">
+    <!-- Salesforce CRM -->
+    <div class="col-md-4 d-flex">
+        <div class="tech-box w-100 text-center">
+            <!-- b<i class="fas fa-cloud m-3" style="font-size: 50px; color: #00A1E0;"></i> -->
+            <img
+            src="http://localhost:4000/assets/img/salesforce.png"
+            width="128px"
+            title="Salesforce"
+          />
+            <h5>Salesforce CRM</h5>
+            <p>Sales Cloud, Service Cloud, Experience Cloud, Analytics Cloud, Platform Shield, App Cloud, Mulesoft</p>
+        </div>
+    </div>
+    <!-- Python Full Stack -->
+    <div class="col-md-4 d-flex">
+        <div class="tech-box w-100 text-center">
+            <!-- <i class="fab fa-python mb-3" style="font-size: 50px; color: #306998;"></i> -->
+            <img
+            src="http://localhost:4000/assets/img/python.png"
+            width="128px"
+            title="Python"
+          />
+            <h5>Python Full Stack</h5>
+            <p>Python Automation, FastAPI Development, Django Web Development, Data Analytics using Pandas + Jupyter</p>
+        </div>
+    </div>
+    <!-- Core Web Stack -->
+    <div class="col-md-4 d-flex">
+        <div class="tech-box w-100 text-center">
+            <!-- <i class="fab fa-html5 mb-3" style="font-size: 50px; color: #E34F26;"></i> -->
+            <img
+            src="http://localhost:4000/assets/img/js.png"
+            width="128px"
+            title="Javascript"
+          />
+            <h5>Core Web Stack</h5>
+            <p>HTML/CSS/JavaScript, JQuery, NodeJS Backend, React Framework, NextJS Framework, Tailwind CSS, Bulma CSS, Jekyll Websites</p>
+        </div>
+    </div>
+</div>
+        </div>
+        <!-- <div class="py-3">
             <h1 id="tech-stack">Technologies we support</h1>
             <div class="d-flex flex-column gap-4 py-2">
                 <div
@@ -165,8 +239,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div></div>
+        </div> -->
+    </div>
+</div></div>
         <footer class="container-fluid pt-4 my-md-5 pt-md-5 border-top">
     <div class="row container-fluid">
         <div class="col-12 col-md">
@@ -191,7 +266,7 @@
             <h5>Services &amp; Solutions</h5>
             <ul class="list-unstyled text-small">
                 <li>
-                    <a class="text-muted" href="http://localhost:4000/services/functional-consulting">Functional Consulting Service</a>
+                    <a class="text-muted" href="http://localhost:4000/services/business-consulting">Business Consulting Service</a>
                 </li>
                 <li>
                     <a class="text-muted" href="http://localhost:4000/services/delivery">Technology/Delivery Services</a>

@@ -4,53 +4,44 @@ layout: default
 ---
 
 <div class="container-fluid">
-  <div class="container">
+  <div class="container-fluid">
     <h1>Contact Us</h1>
     <p>We believe that you have gone through our website as much as you can.</p>
     <p>
-      Let's have a discussion to understand your pain points and how we can help
-      you. Fill up the form below and send us your request. We will revert back to you at the earliest.
+      Fill up the form below and send us your request (be it a business need, applying for job opportunities or any kind of general inquiry). We will revert back to you at the earliest.
     </p>
-    <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/mqazjaww" method="post" class="container my-5 p-4 border rounded shadow-sm bg-light">
-        <fieldset id="fs-frm-inputs" class="mb-3">
+    <div class="row">
+      <!-- Left Side - Form -->
+      <div class="col-md-6">
+        <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/mqazjaww" method="post" class="my-5 p-4 border rounded shadow-sm bg-light">
+          <fieldset id="fs-frm-inputs" class="mb-3">
             <div class="mb-3">
-                <label for="full-name" class="form-label">Full Name</label>
-                <input type="text" name="name" id="full-name" class="form-control" placeholder="John Doe" required="">
+              <label for="full-name" class="form-label">Full Name</label>
+              <input type="text" name="name" id="full-name" class="form-control" placeholder="John Doe" required="">
             </div>
             <div class="mb-3">
-                <label for="email-address" class="form-label">Email Address</label>
-                <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="john@doe.com" required="">
+              <label for="email-address" class="form-label">Email Address</label>
+              <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="john@doe.com" required="">
             </div>
             <div class="mb-3">
-                <label for="telephone" class="form-label">Telephone Number (Optional)</label>
-                <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="(555) 555-5555">
+              <label for="telephone" class="form-label">Telephone Number (Optional)</label>
+              <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="(555) 555-5555">
             </div>
             <div class="mb-3">
-                <label for="complaint" class="form-label">Message</label>
-                <textarea rows="6" name="complaint" id="complaint" class="form-control" placeholder="Enter your message in detail" required=""></textarea>
+              <label for="complaint" class="form-label">Message</label>
+              <textarea rows="6" name="complaint" id="complaint" class="form-control" placeholder="Enter your message in detail" required=""></textarea>
             </div>
             <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
-        </fieldset>
-        <div class="d-grid">
-            <input type="submit" value="Submit Contact Form" class="btn btn-danger btn-lg">
-        </div>
-    </form>
-    
-    <div>
-      <h2>Locations</h2>
-      <div>
-        <strong>Headquarters</strong>
-        <div class="d-flex h-100 align-items-center">
-          <img
-            src="{{site.url}}/assets/img/india-flag.png"
-            width="64px"
-            title="India"
-          />
-          <div>
-            69/1854 A1, SRM Road, Near Nirmala Shishu Bhavan, Kaloor,
-            Kochi-682018, Kerala, India
+          </fieldset>
+          <div class="d-grid">
+            <input type="submit" value="Submit Contact Form" class="btn btn-primary btn-lg">
           </div>
-        </div>
+        </form>
+      </div>
+
+      <!-- Right Side - Google Map -->
+      <div class="col-md-6">
+        {% include location_map.html %}
       </div>
     </div>
   </div>

@@ -11,8 +11,8 @@ layout: default
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center text-md-start">Accelerate your business outcomes</h1>
                 <p class="lead text-center text-md-start">Leverage our experience, skills, and productivity to scale your business objectives with our business consulting &amp; technology services.</p>
                 <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
-                    <a href="{{site.url}}/services" class="btn btn-danger btn-lg px-4 me-lg-2">Explore Our Services</a>
-                    <a href="{{site.url}}/contact" class="btn btn-primary btn-lg px-4">Contact Us</a>
+                    <a href="{{site.url}}/services" class="btn btn-primary btn-lg px-4 me-lg-2">Explore Our Services</a>
+                    <a href="{{site.url}}/contact" class="btn btn-outline-secondary btn-lg px-4">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -31,81 +31,13 @@ layout: default
 <!-- How Do We Deliver Section -->
 <div class="container-fluid custom-container-grey mt-5">
     <h2 class="text-center mb-4">How do we deliver</h2>
-    <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-4 d-flex">
-            <div class="card p-3 w-100 h-100">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="{{site.url}}/services/functional-consulting">Functional Consulting</a></h5>
-                    <p class="card-text">Mapping your business objectives to programs, deriving project needs/tuning existing projects to deliver outcomes, measuring & monitoring outcomes, incorporating strategies to boost ROI and optimize spend.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-md-4 d-flex">
-            <div class="card p-3 w-100 h-100">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="{{site.url}}/services/delivery">Technology/Delivery Services</a></h5>
-                    <p class="card-text">Receive end-to-end platform/software development services across all phases of SDLC - Requirements Gathering, Design & Architecture, Coding, Quality Control, Release Management, Maintenance & Support packaged in the delivery model best suited for you.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-md-4 d-flex">
-            <div class="card p-3 w-100 h-100">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="{{site.url}}/services/workforce">Workforce as a Service</a></h5>
-                    <p class="card-text">Empower yourself with a new team or augment staff to your existing team with the unique skillset needs that you desire. Engage and disengage with flexible models that suit you the best; you set the expectations, and the workforce will deliver.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include services.html %}
 </div>
 
 <!-- Tech Stack Section -->
 <div class="container-fluid mt-5">
     <h2 class="text-center mb-4">Technology Stack</h2>
-    <div class="row g-4">
-        <!-- Salesforce CRM -->
-        <div class="col-md-4 d-flex">
-            <div class="tech-box w-100 text-center">
-                <!-- b<i class="fas fa-cloud m-3" style="font-size: 50px; color: #00A1E0;"></i> -->
-                <img
-                src="{{site.url}}/assets/img/salesforce.png"
-                width="128px"
-                title="Salesforce"
-              />
-                <h5>Salesforce CRM</h5>
-                <p>Sales Cloud, Service Cloud, Experience Cloud, Analytics Cloud, Platform Shield, App Cloud, Mulesoft</p>
-            </div>
-        </div>
-        <!-- Python Full Stack -->
-        <div class="col-md-4 d-flex">
-            <div class="tech-box w-100 text-center">
-                <!-- <i class="fab fa-python mb-3" style="font-size: 50px; color: #306998;"></i> -->
-                <img
-                src="{{site.url}}/assets/img/python.png"
-                width="128px"
-                title="Python"
-              />
-                <h5>Python Full Stack</h5>
-                <p>Python Automation, FastAPI Development, Django Web Development, Data Analytics using Pandas + Jupyter</p>
-            </div>
-        </div>
-        <!-- Core Web Stack -->
-        <div class="col-md-4 d-flex">
-            <div class="tech-box w-100 text-center">
-                <!-- <i class="fab fa-html5 mb-3" style="font-size: 50px; color: #E34F26;"></i> -->
-                <img
-                src="{{site.url}}/assets/img/js.png"
-                width="128px"
-                title="Javascript"
-              />
-                <h5>Core Web Stack</h5>
-                <p>HTML/CSS/JavaScript, JQuery, NodeJS Backend, React Framework, NextJS Framework, Tailwind CSS, Bulma CSS</p>
-            </div>
-        </div>
-    </div>
+    {% include tech_stack.html %}
 </div>
 
 {% include why_bitmoq.html %}

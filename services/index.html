@@ -4,10 +4,11 @@ layout: default
 ---
 
 <div class="container-fluid">
-    <h1 id="delivery-services">Our Services</h1>
-    <div>
+    <div class="container-fluid">
+        <h1>Our Services</h1>
         <p>Our services are broadly categorized into three core areas.</p>
-        <div class="row g-4 py-2 row-cols-1 row-cols-lg-3 h-100 d-flex">
+        {% include services.html %}
+        <!-- <div class="row g-4 py-2 row-cols-1 row-cols-lg-3 h-100 d-flex">
             <div class="col d-flex align-items-start">
                 <div class="d-flex flex-column justify-content-start h-100 border p-4 bg-primary text-white">
                     <h3>Professional Services</h3>
@@ -48,9 +49,14 @@ layout: default
                         progressive outcome with efficient resources that ensures zero to minimal disruption to business
                         24*7.</p>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="py-3">
+        <div class="container-fluid mt-5">
+            <h1>Technology Stack</h2>
+            <p>Our services cater to the following tech stack we support.</p>
+            {% include tech_stack.html %}
+        </div>
+        <!-- <div class="py-3">
             <h1 id="tech-stack">Technologies we support</h1>
             <div class="d-flex flex-column gap-4 py-2">
                 <div
@@ -86,5 +92,6 @@ layout: default
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
+</div>
