@@ -6,6 +6,7 @@ excerpt: With MFA being enforced in Salesforce, how does it play well with and w
 comments: true
 type: blog
 permalink: /blog/:title/
+published: true
 ---
 
 # What is MFA

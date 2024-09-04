@@ -13,20 +13,22 @@ layout: default
             <div class="col-sm-9">
                 <div class="blog-posts">
                     {% for post in case_study_posts %}
-                    <div class="blog-post spacing">
-                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                        <p>
-                            Posted on
-                            <span class="date"> {{ post.date | date: '%B %d, %Y' }} </span>
-                        </p>
-                        <p>
-                            {% for category in post.categories %}
-                            <a href="/blogs/categories/#{{ category | slugify | downcase }}" class="badge text-bg-primary">{{ category }}</a>
-                            {% endfor %}
-                        </p>
-                        {{ post.excerpt }}
-                    </div>
-                    <hr />
+                        {% if post.published == true %}
+                        <div class="blog-post spacing">
+                            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                            <p>
+                                Posted on
+                                <span class="date"> {{ post.date | date: '%B %d, %Y' }} </span>
+                            </p>
+                            <p>
+                                {% for category in post.categories %}
+                                <a href="/blogs/categories/#{{ category | slugify | downcase }}" class="badge text-bg-primary">{{ category }}</a>
+                                {% endfor %}
+                            </p>
+                            {{ post.excerpt }}
+                        </div>
+                        <hr />
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
