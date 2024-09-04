@@ -5,11 +5,28 @@
         </a>
         <ul class="nav nav-underline">
             <li class="nav-item"><a href="{{site.url}}/about" class="nav-link link-body-emphasis px-2">About Us</a></li>
-            <li class="nav-item"><a href="{{site.url}}/services" class="nav-link link-body-emphasis px-2">Our
-                    Services</a></li>
-            <li class="nav-item"><a href="{{site.url}}/blogs" class="nav-link link-body-emphasis px-2">Blogs</a></li>
-            <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link link-body-emphasis px-2">Contact Us</a>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a href="{{site.url}}/services/functional-consulting" class="dropdown-item">Functional Consulting</a></li>
+                    <li><a href="{{site.url}}/services/delivery" class="dropdown-item">Technology/Delivery Services</a></li>
+                    <li><a href="{{site.url}}/services/workforce" class="dropdown-item">Workforce as a Service</a></li>
+                </ul>
             </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Solutions</a>
+                <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                    <li><a href="{{site.url}}/#" class="dropdown-item">API Migration &amp; Modernization</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                    <li><a href="{{site.url}}/blogs" class="dropdown-item">Blogs</a></li>
+                    <li><a href="{{site.url}}/case-studies" class="dropdown-item">Case Studies</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link link-body-emphasis px-2">Contact Us</a></li>
         </ul>
     </div>
 </header>

@@ -4,6 +4,8 @@ layout: blog
 category: [Salesforce, DevOps]
 excerpt: Do you need costly DevOps products to manage Salesforce DevOps? Well, let's explore how simple alternatives can help you achieve DevOps for Salesforce.
 comments: true
+type: blog
+permalink: /blog/:title/
 ---
 
 Salesforce DevOps is the most discussed & wanted feature by all organizations that use Salesforce CRM. But have you ever wondered what is the right product and how to judge if that is the best fit? In this article, we will explore various DevOps offerings that are available, their advantages and disadvantages & what is best for you.

@@ -4,6 +4,8 @@ layout: blog
 category: [Salesforce, Zendesk, Integration]
 excerpt: With rising popularity of various CRM's, organizations use multiple CRM's for various departments but struggle to get a 360 degree perspective of a customer. In this blog, we will discuss how to integrate Zendesk with Salesforce and how to leverage this killer combination.
 comments: true
+type: blog
+permalink: /blog/:title/
 ---
 
 It's now a common trend that organizations using multiple CRM's for various departments. Why does an organization have to do something like that? It depends on lots of aspects like to keep expenses under control, leverage the technological advantage that each products provide, having the competitive edge to meet customer needs faster, etc.

@@ -1,30 +1,36 @@
 ---
-title: Blog Categories
+title: Content Categories
 layout: default
 ---
 <div class="container-fluid">
     <div class="container-fluid">
         <div style="margin-bottom: 2rem">
-            <h1>Blogs by Category</h1>
+            <h1>Contents by Category</h1>
         </div>
         <div>
             {% for category in site.categories %}
-            <h4 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
-                {{ category[0] | camelcase }}
-            </h4>
-            <ul>
-                {% assign pages_list = category[1] %} {% for post in pages_list %} {% if
-                post.title != null %} {% if group == null or group == post.group %}
-                <li>
-                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }} -
-                        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date:
-                            "%B
-                            %d,
-                            %Y" }}</time></a>
-                </li>
-                {% endif %} {% endif %} {% endfor %} {% assign pages_list = nil %} {% assign
-                group = nil %}
-            </ul>
+            <div class="mb-3">
+                <h4 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+                    {{ category[0] | camelcase }}
+                </h4>
+                <ol class="list-group list-group-numbered">
+                    {% assign pages_list = category[1] %} {% for post in pages_list %} {% if
+                    post.title != null %} {% if group == null or group == post.group %}
+                    <li>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="text-uppercase small badge bg-secondary p-1 rounded text-white">{{post.type}}</div>
+                            <div><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></div>        
+                        </div>
+                        <!-- <a href="{{ site.url }}{{ post.url }}">{{ post.title }} -
+                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date:
+                                "%B
+                                %d,
+                                %Y" }}</time></a> -->
+                    </li>
+                    {% endif %} {% endif %} {% endfor %} {% assign pages_list = nil %} {% assign
+                    group = nil %}
+                </ul>
+            </div>
             {% endfor %}
         </div>
     </div>

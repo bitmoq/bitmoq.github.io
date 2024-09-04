@@ -4,6 +4,8 @@ layout: blog
 category: [Salesforce, Security]
 excerpt: With MFA being enforced in Salesforce, how does it play well with and without SSO. In this blog, we explain what exactly do you need to know to get this right.
 comments: true
+type: blog
+permalink: /blog/:title/
 ---
 
 # What is MFA
