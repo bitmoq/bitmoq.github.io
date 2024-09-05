@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/assets/vs.css" /> -->
@@ -33,8 +32,8 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Your Trusted Technology Partner" />
 <meta property="og:description" content="Your Trusted Technology Partner" />
-<link rel="canonical" href="https://bitmoq.github.io/blogs/" />
-<meta property="og:url" content="https://bitmoq.github.io/blogs/" />
+<link rel="canonical" href="http://localhost:4000/blogs/" />
+<meta property="og:url" content="http://localhost:4000/blogs/" />
 <meta property="og:site_name" content="Bitmoq Technologies" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
@@ -42,7 +41,7 @@
 <meta name="twitter:site" content="@bitmoq" />
 <meta name="twitter:creator" content="@Bitmoq Technologies" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Bitmoq Technologies"},"description":"Your Trusted Technology Partner","headline":"Blogs","url":"https://bitmoq.github.io/blogs/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Bitmoq Technologies"},"description":"Your Trusted Technology Partner","headline":"Blogs","url":"http://localhost:4000/blogs/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -50,38 +49,50 @@
 <body>
     <div>
         <header class="container-fluid py-3 mb-4 border-bottom">
-    <div class="container-fluid d-flex flex-wrap justify-content-center">
-        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-sm-auto link-body-emphasis text-decoration-none">
-            <span class="fs-4 text-uppercase fw-bold ">Bitmoq Technologies</span>
-        </a>
-        <ul class="nav nav-underline">
-            <li class="nav-item"><a href="https://bitmoq.github.io/about" class="nav-link link-body-emphasis px-2">About Us</a></li>
-            <li class="nav-item dropdown">
-                <a href="https://bitmoq.github.io/services/" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
-                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <li><a href="https://bitmoq.github.io/services/business-consulting" class="dropdown-item">Business Consulting</a></li>
-                    <li><a href="https://bitmoq.github.io/services/delivery" class="dropdown-item">Technology/Delivery Services</a></li>
-                    <li><a href="https://bitmoq.github.io/services/workforce" class="dropdown-item">Workforce as a Service</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Solutions</a>
-                <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                    <li><a href="https://bitmoq.github.io/#" class="dropdown-item">API Migration &amp; Modernization</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
-                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                    <li><a href="https://bitmoq.github.io/blogs" class="dropdown-item">Blogs</a></li>
-                    <li><a href="https://bitmoq.github.io/case-studies" class="dropdown-item">Case Studies</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="https://bitmoq.github.io/contact" class="nav-link link-body-emphasis px-2">Contact Us</a></li>
-        </ul>
-    </div>
-</header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid d-flex flex-wrap justify-content-between">
+            <!-- Title and Tagline -->
+            <a href="/" class="d-flex flex-column align-items-start mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+                <div class="fs-4 text-uppercase fw-bold">Bitmoq Technologies</div>
+                <div class="fs-6">Your Trusted Technology Partner</div>
+            </a>
 
+            <!-- Hamburger Menu for Small Screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="http://localhost:4000/about" class="nav-link link-body-emphasis px-2">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="http://localhost:4000/services/" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a href="http://localhost:4000/services/business-consulting" class="dropdown-item">Business Consulting</a></li>
+                            <li><a href="http://localhost:4000/services/delivery" class="dropdown-item">Technology/Delivery Services</a></li>
+                            <li><a href="http://localhost:4000/services/workforce" class="dropdown-item">Workforce as a Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Solutions</a>
+                        <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                            <li><a href="http://localhost:4000/#" class="dropdown-item">API Migration &amp; Modernization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a href="http://localhost:4000/blogs" class="dropdown-item">Blogs</a></li>
+                            <li><a href="http://localhost:4000/case-studies" class="dropdown-item">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="http://localhost:4000/contact" class="nav-link link-body-emphasis px-2">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
         <div class="py-1"><div class="container-fluid">
     <div class="container-fluid">
         <div style="margin-bottom: 2rem">
@@ -276,13 +287,13 @@
             <h5>Services &amp; Solutions</h5>
             <ul class="list-unstyled text-small">
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/services/business-consulting">Business Consulting Service</a>
+                    <a class="text-muted" href="http://localhost:4000/services/business-consulting">Business Consulting Service</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/services/delivery">Technology/Delivery Services</a>
+                    <a class="text-muted" href="http://localhost:4000/services/delivery">Technology/Delivery Services</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/services/workforce">Workforce as a Service</a>
+                    <a class="text-muted" href="http://localhost:4000/services/workforce">Workforce as a Service</a>
                 </li>
             </ul>
         </div>
@@ -290,16 +301,16 @@
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/blogs/">Blogs</a>
+                    <a class="text-muted" href="http://localhost:4000/blogs/">Blogs</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/case-studies/">Case Studies</a>
+                    <a class="text-muted" href="http://localhost:4000/case-studies/">Case Studies</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/blogs/archives">Content by Date</a>
+                    <a class="text-muted" href="http://localhost:4000/blogs/archives">Content by Date</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/blogs/categories">Content by Category</a>
+                    <a class="text-muted" href="http://localhost:4000/blogs/categories">Content by Category</a>
                 </li>
             </ul>
         </div>
@@ -307,32 +318,25 @@
             <h5>Quick Links</h5>
             <ul class="list-unstyled text-small">
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/about">About Us</a>
+                    <a class="text-muted" href="http://localhost:4000/about">About Us</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/contact">Contact Us</a>
+                    <a class="text-muted" href="http://localhost:4000/contact">Contact Us</a>
                 </li>
                 <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/careers">Careers</a>
+                    <a class="text-muted" href="http://localhost:4000/careers">Careers</a>
                 </li>
                 <!-- <li>
-                    <a class="text-muted" href="https://bitmoq.github.io/customer-testimonials">Customer Testimonials</a>
+                    <a class="text-muted" href="http://localhost:4000/customer-testimonials">Customer Testimonials</a>
                 </li> -->
             </ul>
         </div>
     </div>
 </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
     <script>
