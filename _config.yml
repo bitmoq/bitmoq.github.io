@@ -1,19 +1,41 @@
 title: Bitmoq Technologies
 tagline: Your Trusted Technology Partner
-url: https://bitmoq.github.io
-description: Your Trusted Technology Partner
+url: https://www.bitmoq.com
+baseurl: ""
+description: Comprehensive business solutions including AI integration, sales optimization, digital transformation, and process automation to help organizations scale and succeed.
 author: Bitmoq Technologies
+email: info@bitmoq.com
 
+# SEO Settings
+lang: en
+locale: en_US
+keywords: 
+  - AI integration
+  - business automation
+  - digital transformation
+  - sales optimization
+  - process automation
+  - business consulting
+  - technology consulting
+  - customer experience transformation
+  - business process optimization
+
+# Social Media
 twitter:
-  username: bitmoq
-  card: summary
+  username: bitmoqtech
+  card: summary_large_image
 
 social:
-  name: Bitmoq
+  name: Bitmoq Technologies
   links:
     - https://www.facebook.com/bitmoqtechnology
     - https://twitter.com/bitmoqtech
     - https://www.linkedin.com/company/bitmoq-technology/
+    - https://www.instagram.com/bitmoq
+
+# SEO Tag Plugin Configuration
+logo: /assets/img/hero.png
+image: /assets/img/hero.png
 
 paginate: 10
 paginate_path: "/blogs/page:num/"

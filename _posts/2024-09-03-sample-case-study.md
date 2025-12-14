@@ -6,7 +6,7 @@ excerpt: This is a test case study
 comments: false
 type: case-study
 permalink: /case-study/:title/
-published: false
+published: true
 ---
 
 This is a test case study

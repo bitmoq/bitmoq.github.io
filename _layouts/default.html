@@ -15,8 +15,124 @@
     <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/1ab2b53191.js" crossorigin="anonymous"></script>
-    <title>{{ page.title }} | {{ site.title }}</title>
     {% include analytics.html %} {% seo %}
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:site" content="@{{ site.twitter.username }}">
+    <meta name="twitter:creator" content="@{{ site.twitter.username }}">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}",
+      "description": "{{ site.description }}",
+      "email": "{{ site.email }}",
+      "foundingDate": "2022",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        {% for link in site.social.links %}
+        "{{ link }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "{{ site.email }}"
+      }
+    }
+    </script>
+    
+    {% if page.layout == 'default' and page.title == 'Home' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}{{ site.baseurl }}/blogs?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Business Consulting Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Business Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Integration & Automation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sales Process Optimization"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Customer Experience Transformation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital Transformation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Process Optimization"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technology Consulting"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    {% endif %}
 </head>
 
 <body>

@@ -1,72 +1,72 @@
 ---
-title: Case Studies
+title: Case Studies | Business Transformation Success Stories | Bitmoq Technologies
+description: Real success stories from our business transformation projects. Discover how we helped B2B distributors increase sales by 150% and manufacturing companies achieve 200% ROI with AI integration and digital transformation.
+keywords: case studies, business transformation, AI integration success, digital transformation case studies, ROI success stories, business automation examples
+og:
+  title: Case Studies | Business Transformation Success Stories | Bitmoq Technologies
+  description: Real success stories from our business transformation projects. Discover how we helped companies achieve significant ROI with AI integration and digital transformation.
+  type: website
+twitter:
+  card: summary_large_image
+  title: Case Studies | Bitmoq Technologies
+  description: Real success stories from our business transformation projects.
 layout: default
 ---
-<div class="container-fluid">
-    <div class="container-fluid">
-        <div style="margin-bottom: 2rem">
-            <h1>Case Studies</h1>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">Case Studies</h1>
+            <p class="lead text-muted">Real success stories from our business transformation projects</p>
         </div>
+
         {% assign case_study_posts = site.posts | where: "type", "case-study" %}
         {% if case_study_posts.size > 0 %}
         <div class="row">
-            <div class="col-sm-9">
+            <!-- Main Content -->
+            <div class="col-lg-9">
                 <div class="blog-posts">
                     {% for post in case_study_posts %}
                         {% if post.published == true %}
-                        <div class="blog-post spacing">
-                            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                            <p>
-                                Posted on
-                                <span class="date"> {{ post.date | date: '%B %d, %Y' }} </span>
-                            </p>
-                            <p>
-                                {% for category in post.categories %}
-                                <a href="/blogs/categories/#{{ category | slugify | downcase }}" class="badge text-bg-primary">{{ category }}</a>
-                                {% endfor %}
-                            </p>
-                            {{ post.excerpt }}
-                        </div>
-                        <hr />
+                        <article class="card border-0 shadow-sm mb-4">
+                            <div class="card-body p-4">
+                                <h2 class="card-title h4 fw-bold mb-3">
+                                    <a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
+                                </h2>
+                                <div class="d-flex flex-wrap align-items-center gap-3 mb-3 text-muted small">
+                                    <span><i class="far fa-calendar"></i> {{ post.date | date: '%B %d, %Y' }}</span>
+                                    {% if post.categories.size > 0 %}
+                                    <span>
+                                        {% for category in post.categories %}
+                                        <a href="{{site.url}}/blogs/categories/#{{ category | slugify | downcase }}" class="badge text-bg-primary text-decoration-none me-1">{{ category }}</a>
+                                        {% endfor %}
+                                    </span>
+                                    {% endif %}
+                                </div>
+                                <div class="card-text">
+                                    {{ post.excerpt }}
+                                </div>
+                                <a href="{{ post.url }}" class="btn btn-outline-primary mt-3">Read Case Study</a>
+                            </div>
+                        </article>
                         {% endif %}
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-sm-3">
+
+            <!-- Sidebar -->
+            <div class="col-lg-3">
                 {% include case_study_sidebar.html %}
             </div>
-
-            <!-- pagination -->
-            {% if paginator.total_pages > 1 %}
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-                {% else %}
-                <span>&laquo; Prev</span>
-                {% endif %} 
-
-                {% for page in (1..paginator.total_pages) %}
-                    {% if page == paginator.page %}
-                    <span class="webjeda">{{ page }}</span>
-                    {% elsif page == 1 %}
-                    <a href="/">{{ page }}</a>
-                    {% else %}
-                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                    {% endif %}
-                {% endfor %} 
-
-                {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-                {% else %}
-                <span>Next &raquo;</span>
-                {% endif %}
-            </div>
-            {% endif %}
         </div>
         {% else %}
-        <blockquote class="blockquote-warning">
-            <p>There are no case studies to display. Stay tuned.</p>
-        </blockquote>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="alert alert-info text-center" role="alert">
+                    <h4 class="alert-heading">Stay Tuned!</h4>
+                    <p class="mb-0">There are no case studies to display at the moment. Check back soon for real success stories from our business transformation projects.</p>
+                </div>
+            </div>
+        </div>
         {% endif %}
     </div>
 </div>

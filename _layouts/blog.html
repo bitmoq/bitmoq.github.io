@@ -1,41 +1,54 @@
 ---
 layout: default
 ---
-<div class="container-fluid">
-    <div class="container-fluid">
-        <div style="margin-bottom: 2rem">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/blogs/index.html">Blogs</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                        {{ page.title }}
-                    </li>
-                </ol>
-            </nav>
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{site.url}}/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{site.url}}/blogs">Blogs</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+                    </ol>
+                </nav>
+
+                <!-- Article Header -->
+                <article>
+                    <h1 class="display-5 fw-bold mb-3">{{ page.title }}</h1>
+                    <div class="d-flex flex-wrap align-items-center gap-3 mb-4 text-muted">
+                        <span><i class="far fa-calendar"></i> {{ page.date | date: '%B %d, %Y' }}</span>
+                        {% if page.categories.size > 0 %}
+                        <span>
+                            {% for category in page.categories %}
+                            <a href="{{site.url}}/blogs/categories/#{{category | slugify | downcase }}" class="badge text-bg-primary text-decoration-none me-1">{{category}}</a>
+                            {% endfor %}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="article-content mb-5">
+                        {{ content }}
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="card bg-light border-0 p-4 mb-4">
+                        <p class="mb-2"><strong>Hope you found this post useful and insightful.{% if page.comments %} Please let us know your thoughts/suggestions/questions via comments.{% endif %}</strong></p>
+                        <p class="mb-0"><strong>If you want to get in touch with us, please fill up the <a href="{{site.url}}/contact" class="text-decoration-none">contact us form</a> and submit.</strong></p>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    {% include share-buttons.html %}
+
+                    <!-- Comments -->
+                    {% if page.comments %}
+                    <hr class="my-5">
+                    {% include disqus_comments.html %}
+                    {% endif %}
+                </article>
+            </div>
         </div>
-        <h1>{{ page.title }}</h1>
-        <p>
-            Posted on
-            <span class="date"> {{ page.date | date: '%B %d, %Y' }} </span>
-        </p>
-        <p>
-            {% for category in page.categories%}
-            <a href="/blogs/categories/#{{category | slugify | downcase }}" class="badge text-bg-primary">{{category}}</a>
-            {% endfor %}
-        </p>
-        {{ content }}
-        <br />
-        <div class="d-flex flex-column">
-            <strong>Hope you found this post useful and insightful.{% if page.comments %} Please let us know your
-                thoughts/suggestions/questions
-                via comments. {% endif %}</strong>
-            <strong>If you want to get in touch with us, please fill up the <a
-                    href="{{site.url}}/contact">contact us form</a> and submit</strong> 
-        </div>
-        <hr />
-        {% include share-buttons.html %}
-        <hr />
-        {% include disqus_comments.html %}
     </div>
 </div>

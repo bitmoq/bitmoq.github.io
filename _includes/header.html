@@ -1,10 +1,10 @@
-<header class="container-fluid py-3 mb-4 border-bottom">
+<header class="container-fluid py-3 border-bottom">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid d-flex flex-wrap justify-content-between">
+        <div class="container">
             <!-- Title and Tagline -->
-            <a href="/" class="d-flex flex-column align-items-start mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+            <a href="/" class="navbar-brand d-flex flex-column align-items-start mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
                 <div class="fs-4 text-uppercase fw-bold">{{site.title}}</div>
-                <div class="fs-6">{{site.tagline}}</div>
+                <div class="fs-6 text-muted">{{site.tagline}}</div>
             </a>
 
             <!-- Hamburger Menu for Small Screens -->
@@ -15,29 +15,16 @@
             <!-- Navigation Menu -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="{{site.url}}/about" class="nav-link link-body-emphasis px-2">About Us</a></li>
+                    <li class="nav-item"><a href="{{site.url}}/about" class="nav-link link-body-emphasis px-3">About</a></li>
+                    <li class="nav-item"><a href="{{site.url}}/services" class="nav-link link-body-emphasis px-3">Our Services</a></li>
                     <li class="nav-item dropdown">
-                        <a href="{{site.url}}/services/" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a href="{{site.url}}/services/business-consulting" class="dropdown-item">Business Consulting</a></li>
-                            <li><a href="{{site.url}}/services/delivery" class="dropdown-item">Technology/Delivery Services</a></li>
-                            <li><a href="{{site.url}}/services/workforce" class="dropdown-item">Workforce as a Service</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">Solutions</a>
-                        <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                            <li><a href="{{site.url}}/solutions/api-migration-modernization" class="dropdown-item">API Migration &amp; Modernization</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                        <a href="#" class="nav-link link-body-emphasis px-3 dropdown-toggle" id="resourcesDropdown" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
                         <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
                             <li><a href="{{site.url}}/blogs" class="dropdown-item">Blogs</a></li>
                             <li><a href="{{site.url}}/case-studies" class="dropdown-item">Case Studies</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link link-body-emphasis px-2">Contact Us</a></li>
+                    <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link link-body-emphasis px-3">Contact Us</a></li>
                 </ul>
             </div>
         </div>

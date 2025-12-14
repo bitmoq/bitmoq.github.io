@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bitmoq.com/sitemap.xml
+
+# Disallow admin and private areas if any
+Disallow: /_site/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_posts/
+Disallow: /_config.yml
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+

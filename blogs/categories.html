@@ -1,37 +1,88 @@
 ---
-title: Content Categories
+title: Content Categories | Blogs & Case Studies by Category | Bitmoq Technologies
+description: Browse our blogs and case studies organized by category. Find content on AI integration, digital transformation, sales optimization, and more.
+keywords: blog categories, case study categories, content by category, technology blog categories
+og:
+  title: Content Categories | Bitmoq Technologies
+  description: Browse our blogs and case studies organized by category.
+  type: website
+twitter:
+  card: summary
+  title: Content Categories | Bitmoq Technologies
+  description: Browse our blogs and case studies organized by category.
 layout: default
 ---
-<div class="container-fluid">
-    <div class="container-fluid">
-        <div style="margin-bottom: 2rem">
-            <h1>Contents by Category</h1>
+<div class="container-fluid py-5 mb-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">Content Categories</h1>
+            <p class="lead text-muted">Browse our blogs and case studies organized by category</p>
         </div>
-        <div>
-            {% for category in site.categories %}
-            <div class="mb-3">
-                <h4 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
-                    {{ category[0] | camelcase }}
-                </h4>
-                <ol class="list-group list-group-numbered">
-                    {% assign pages_list = category[1] %} {% for post in pages_list %} {% if
-                    post.title != null %} {% if group == null or group == post.group %}
-                    <li>
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="text-uppercase small badge bg-secondary p-1 rounded text-white">{{post.type}}</div>
-                            <div><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></div>        
+
+        {% assign has_categories = false %}
+        {% for category in site.categories %}
+            {% if category[1].size > 0 %}
+                {% assign has_categories = true %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                {% if has_categories %}
+                    {% for category in site.categories %}
+                        {% assign category_posts = category[1] | where: "published", true %}
+                        {% if category_posts.size > 0 %}
+                        <div class="mb-4 border rounded overflow-hidden">
+                            <div class="bg-primary text-white p-3">
+                                <h3 class="h4 mb-0" id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+                                    {{ category[0] | capitalize }}
+                                    <span class="badge bg-light text-primary ms-2">{{ category_posts.size }}</span>
+                                </h3>
+                            </div>
+                            <div class="px-2 pt-2 pb-0 bg-white">
+                                <ul class="list-unstyled mb-0">
+                                    {% for post in category_posts %}
+                                        {% if post.title != null %}
+                                        <li class="d-flex align-items-center gap-2 py-1 border-bottom archive-list-item">
+                                            <div class="flex-shrink-0">
+                                                {% if post.type == "blog" %}
+                                                <span class="badge text-bg-info small">Blog</span>
+                                                {% elsif post.type == "case-study" %}
+                                                <span class="badge text-bg-success small">Case Study</span>
+                                                {% else %}
+                                                <span class="badge text-bg-secondary small">{{ post.type | capitalize }}</span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <a href="{{ site.url }}{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
+                                                <small class="text-muted ms-2">
+                                                    <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
+                                                </small>
+                                            </div>
+                                        </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
                         </div>
-                        <!-- <a href="{{ site.url }}{{ post.url }}">{{ post.title }} -
-                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date:
-                                "%B
-                                %d,
-                                %Y" }}</time></a> -->
-                    </li>
-                    {% endif %} {% endif %} {% endfor %} {% assign pages_list = nil %} {% assign
-                    group = nil %}
-                </ul>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <div class="alert alert-info text-center" role="alert">
+                        <h4 class="alert-heading">No Categories Yet</h4>
+                        <p class="mb-0">There are no categories to display at the moment. Check back soon for organized content.</p>
+                    </div>
+                {% endif %}
+
+                <!-- Quick Links -->
+                <div class="bg-light border rounded mt-5 p-4 text-center">
+                    <h5 class="mb-3">Explore More Content</h5>
+                    <p class="mb-3">Browse all our blogs and case studies</p>
+                    <a href="{{site.url}}/blogs" class="btn btn-primary me-2">View All Blogs</a>
+                    <a href="{{site.url}}/case-studies" class="btn btn-outline-primary">View All Case Studies</a>
+                </div>
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
