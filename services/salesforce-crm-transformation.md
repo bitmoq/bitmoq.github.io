@@ -27,58 +27,12 @@ permalink: /services/salesforce-crm-transformation/
             </div>
             <div class="col-lg-5">
                 <div class="p-4 bg-light rounded-3 shadow-sm h-100">
-                    <h2 class="h5 fw-bold mb-3">Why It Matters</h2>
+                    <h2 class="h5 fw-bold mb-3">
+                        <i class="fa-solid fa-lightbulb text-primary me-2"></i>Why It Matters
+                    </h2>
                     <p class="text-muted mb-0">
                         Many teams only tap a fraction of Salesforce’s power. By intentionally designing your CRM
                         around how your business sells and serves, you unlock growth, predictability, and adoption.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Value Proposition -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="h4 fw-bold mb-3">Value Proposition for Your Business</h2>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
-                    <h3 class="h6 fw-bold mb-2 text-primary">Boost Sales Productivity</h3>
-                    <p class="mb-0 text-muted">
-                        Increase sales productivity by <strong>30–50%</strong> with streamlined processes and
-                        real-time visibility.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
-                    <h3 class="h6 fw-bold mb-2 text-primary">Better Forecasts, Shorter Cycles</h3>
-                    <p class="mb-0 text-muted">
-                        Improve sales forecast accuracy and reduce sales cycle length by <strong>25–40%</strong>.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
-                    <h3 class="h6 fw-bold mb-2 text-primary">Maximize Salesforce ROI</h3>
-                    <p class="mb-0 text-muted">
-                        Maximize ROI on your Salesforce investment by activating underutilized platform capabilities.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
-                    <h3 class="h6 fw-bold mb-2 text-primary">Reduce Complexity</h3>
-                    <p class="mb-0 text-muted">
-                        Simplify platform complexity to reduce training time and user adoption friction.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
-                    <h3 class="h6 fw-bold mb-2 text-primary">Scale Without the Bloat</h3>
-                    <p class="mb-0 text-muted">
-                        Scale your sales operation without proportionally increasing headcount or technical debt.
                     </p>
                 </div>
             </div>
@@ -148,6 +102,55 @@ permalink: /services/salesforce-crm-transformation/
                 </div>
             </div>
         </div>
+
+        <!-- Value Proposition -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h4 fw-bold mb-3">Value Proposition for Your Business</h2>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
+                    <h3 class="h6 fw-bold mb-2 text-primary">Boost Sales Productivity</h3>
+                    <p class="mb-0 text-muted">
+                        Increase sales productivity by <strong>30–50%</strong> with streamlined processes and
+                        real-time visibility.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
+                    <h3 class="h6 fw-bold mb-2 text-primary">Better Forecasts, Shorter Cycles</h3>
+                    <p class="mb-0 text-muted">
+                        Improve sales forecast accuracy and reduce sales cycle length by <strong>25–40%</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
+                    <h3 class="h6 fw-bold mb-2 text-primary">Maximize Salesforce ROI</h3>
+                    <p class="mb-0 text-muted">
+                        Maximize ROI on your Salesforce investment by activating underutilized platform capabilities.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
+                    <h3 class="h6 fw-bold mb-2 text-primary">Reduce Complexity</h3>
+                    <p class="mb-0 text-muted">
+                        Simplify platform complexity to reduce training time and user adoption friction.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="h-100 p-4 bg-light rounded-3 shadow-sm">
+                    <h3 class="h6 fw-bold mb-2 text-primary">Scale Without the Bloat</h3>
+                    <p class="mb-0 text-muted">
+                        Scale your sales operation without proportionally increasing headcount or technical debt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA -->
         <div class="py-4 px-4 px-md-5 bg-dark text-white rounded-3 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
